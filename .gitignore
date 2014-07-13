@@ -1,3 +1,4 @@
 log/*.log
 *.sw?
 /tmp
+db/test.sqlite3
