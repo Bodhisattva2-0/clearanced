@@ -10,7 +10,7 @@ describe ClearanceTasksController do
 
   describe "create" do
     it "should create a new clearance task" do
-      post :create, :clearance_file => File.open(File.expand_path("spec/fixtures/clearance_file.csv"))
+      post :create, :clearance_file => fixture_file_upload('clearance_file.csv', 'text/csv')
       expect(response).to be_ok
     end
   end
