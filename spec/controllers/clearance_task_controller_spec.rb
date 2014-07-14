@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ClearanceTaskController, :type => :controller do
+describe ClearanceTasksController do
   describe "new" do
     it "should render a new form for clearance task" do
       get :new

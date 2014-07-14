@@ -1,4 +1,4 @@
-class ClearanceTaskController < ApplicationController
+class ClearanceTasksController < ApplicationController
   def new
   end
 

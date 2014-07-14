@@ -1,0 +1,10 @@
+<div class="new-clearance-container">
+  <h1>New Clearance</h1>
+  <%= form_tag clearance_tasks_path, method: :post, multipart: true, role: "form" do  %>
+    <div class="form-group">
+      <%= label_tag :clearance_file, "Upload file for clearance"  %>
+      <%= file_field_tag :clearance_file  %>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  <% end %>
+</div>
