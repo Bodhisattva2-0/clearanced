@@ -1,4 +1,4 @@
-<%= form_tag do  %>
+<%= form_tag({mulitpart: true}) do  %>
   <%= label_tag "Upload file for clearance"  %>
   <%= file_field_tag :clearance_file  %>
 <% end %>

@@ -3,12 +3,12 @@ class ClearanceTaskController < ApplicationController
   end
 
   def create
-    @clearance_task = ClearanceTask.new(ClearanceFileParser, clearance_file)
+    @clearance_task = ClearanceTask.new(ClearanceFileParser, permitted_params[:clearance_file])
     render nothing: true, status: :created
   end
 
   private
-  def clearance_file
+  def permitted_params
     params.permit(:clearance_file)
   end
 end

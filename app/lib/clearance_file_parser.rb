@@ -1,9 +1,19 @@
+require 'csv'
 class ClearanceFileParser
   def initialize(file)
-    @clearance_file = file
+    @item_ids = parse(file)
   end
 
-  def parse
+  def items
+    Item.where(id: @item_ids)
+  end
 
+private
+  def parse(file)
+    item_ids = []
+    CSV.parse(file).each do |row|
+      item_ids << row[0] if row[0].present?
+    end
+    item_ids
   end
-  end
+end
