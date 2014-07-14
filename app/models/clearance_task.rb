@@ -4,6 +4,8 @@ class ClearanceTask
   end
 
   def perform
-
+    @items.each do |item|
+      item.clearance!
+    end
   end
 end
