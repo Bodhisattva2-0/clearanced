@@ -1,7 +1,5 @@
 class Item < ActiveRecord::Base
+  include Clearance
   belongs_to :style
 
-  def clearance!
-
-  end
 end
