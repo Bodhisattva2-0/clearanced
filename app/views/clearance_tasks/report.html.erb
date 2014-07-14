@@ -1,0 +1,21 @@
+<div class="clearance-report-container">
+<h2 class="title">Details of valid items sold under clearance</h2>
+  <table class="table">
+    <thead>
+      <th>Item Id</th>
+      <th>Type</th>
+      <th>Wholesale price</th>
+      <th>Price sold</th>
+      <th>Status</th>
+    </thead>
+    <% @items.each do |item| %>
+    <tr>
+      <td><%= item.id  %></td>
+      <td><%= item.type  %></td>
+      <td><%= item.wholesale_price  %></td>
+      <td><%= item.price_sold  %></td>
+      <td><%= item.status  %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

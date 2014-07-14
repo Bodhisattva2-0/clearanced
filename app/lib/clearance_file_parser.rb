@@ -11,13 +11,9 @@ class ClearanceFileParser
   private
   def parse(file)
     item_ids = []
-    begin
-      CSV.parse(file).each do |row|
-        item_ids << row[0] if row[0].present?
-      end
-      item_ids
-    rescue Exception => e
-      Rails.logger.error(e)
+    CSV.parse(file.read).each do |row|
+      item_ids << row[0] if row[0].present?
     end
+    item_ids
   end
 end
