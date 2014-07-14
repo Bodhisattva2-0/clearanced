@@ -3,8 +3,14 @@ class ClearanceTasksController < ApplicationController
   end
 
   def create
-    @clearance_task = ClearanceTask.new(ClearanceFileParser, permitted_params[:clearance_file])
-    render nothing: true, status: :created
+    clearance_file = permitted_params[:clearance_file]
+    if clearance_file
+      @clearance_task = ClearanceTask.new(ClearanceFileParser, clearance_file)
+      render nothing: true, status: :created
+    else
+      flash[:error] = "Please upload a file"
+      render :new
+    end
   end
 
   private

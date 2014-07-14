@@ -1,0 +1,23 @@
+.new-clearance-container{
+  form {
+    margin-left: 130px;
+  }
+  label, input {
+    font-size: 16px;
+  }
+  .error{
+    background-color: red;
+    width: 250px;
+  }
+  .title{
+    margin-left: 100px;
+  }
+  .submit{
+    padding-top: 30px;
+  }
+  .btn.btn-submit{
+    font-size: 16px;
+    text-align: left;
+    margin-top: 20px;
+  }
+}
